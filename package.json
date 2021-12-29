@@ -17,7 +17,7 @@
     "url": "git://github.com/super0605/squareark-new-ui-sdk.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "start": "tsdx watch",
