@@ -1,0 +1,82 @@
+{
+  "version": "1.0.13",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006 -c .storybook watch-css -s ./src",
+    "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "squareark-ui-sdk",
+  "author": "Cuong Hoang",
+  "module": "dist/squareark-ui-sdk.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/squareark-ui-sdk.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/squareark-ui-sdk.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@size-limit/preset-small-lib": "^5.0.5",
+    "@storybook/addon-essentials": "^6.3.10",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.3.10",
+    "@storybook/addons": "^6.3.10",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.3.10",
+    "@types/react": "^17.0.27",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-outside-click-handler": "^1.3.0",
+    "@types/styled-components": "^5.1.14",
+    "babel-loader": "^8.2.2",
+    "css-loader": "5.2.6",
+    "husky": "^7.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "sass": "^1.42.1",
+    "sass-loader": "10.1.1",
+    "size-limit": "^5.0.5",
+    "style-loader": "2.0.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "react-outside-click-handler": "^1.3.0",
+    "styled-components": "^5.3.1"
+  }
+}
