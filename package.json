@@ -1,5 +1,7 @@
 {
-  "version": "1.0.13",
+  "name": "@super0605/squareark-ui-sdk",
+  "author": "super0605",
+  "version": "1.0.15",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -9,6 +11,13 @@
   ],
   "engines": {
     "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/super0605/squareark-new-ui-sdk.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -35,8 +44,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "squareark-ui-sdk",
-  "author": "Cuong Hoang",
   "module": "dist/squareark-ui-sdk.esm.js",
   "size-limit": [
     {
