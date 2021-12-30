@@ -93,10 +93,8 @@ const ErrorText = styled.div`
 interface ITwoIconsInput extends React.InputHTMLAttributes<any> {
   leftIcon?: any;
   rightIcon?: any;
-  value?: any;
   isDisabled?: any;
   placeholder?: any;
-  onChange?: (e: any) => void;
   helperText?: any;
   error?: any;
 }
@@ -104,31 +102,18 @@ interface ITwoIconsInput extends React.InputHTMLAttributes<any> {
 export const TwoIconsInput: React.FC<ITwoIconsInput> = ({
   leftIcon = <LockIcon />,
   rightIcon = <ViewIcon />,
-  value,
   isDisabled = false,
   placeholder = 'Placeholder',
-  onChange,
   helperText,
   error,
   ...rest
 }) => {
-  const [internalValue, setInternalValue] = React.useState(value);
-
-  const onChangeInput = (e: any) => {
-    setInternalValue(e.target.value);
-    if (onChange) {
-      onChange(e.target.value);
-    }
-  };
-
   return (
     <>
       <Container>
         {leftIcon && <LeftIconContainer>{leftIcon}</LeftIconContainer>}
         <InputX
           {...rest}
-          value={internalValue || ''}
-          onChange={onChangeInput}
           placeholder={placeholder}
           disabled={isDisabled}
           isDisabledStyle={isDisabled}

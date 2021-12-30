@@ -9,6 +9,7 @@ interface IProps {
 export const MessageIcon: React.FC<IProps> = ({
   width = 'calc(100vw * 24 / 375)',
   height = 'calc(100vw * 24 / 375)',
+  fill = '#C7C7C7',
 }) => {
   return (
     <svg
@@ -23,12 +24,12 @@ export const MessageIcon: React.FC<IProps> = ({
         width="16"
         height="12"
         rx="2"
-        stroke="#575757"
+        stroke={fill}
         strokeWidth="2"
       />
       <path
         d="M4 9L11.1056 12.5528C11.6686 12.8343 12.3314 12.8343 12.8944 12.5528L20 9"
-        stroke="#575757"
+        stroke={fill}
         strokeWidth="2"
       />
     </svg>

@@ -72,38 +72,23 @@ const ErrorText = styled.div`
 `;
 
 interface INormalInput {
-  value?: any;
   isDisabled?: any;
   placeholder?: any;
-  onChange?: (e: any) => void;
   helperText?: any;
   error?: any;
 }
 
 export const NormalInput: React.FC<INormalInput> = ({
-  value,
   isDisabled = false,
   placeholder = 'Placeholder',
-  onChange,
   helperText,
   error,
 }) => {
-  const [internalValue, setInternalValue] = React.useState(value);
-
-  const onChangeInput = (e: any) => {
-    setInternalValue(e.target.value);
-    if (onChange) {
-      onChange(e.target.value);
-    }
-  };
-
   return (
     <>
       <div>
         <InputX
           type="text"
-          value={internalValue || ''}
-          onChange={onChangeInput}
           placeholder={placeholder}
           disabled={isDisabled}
           isDisabledStyle={isDisabled}

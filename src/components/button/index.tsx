@@ -68,7 +68,7 @@ const Wrap = styled.button<TWrap>`
   }};
 `;
 
-interface IButton {
+interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   mode?: string;
   text?: string | JSX.Element;
   width?: string;
@@ -82,9 +82,11 @@ export const Button: React.FC<IButton> = ({
   width = '100%',
   height = 'calc(100vw * 48 / 375)',
   disabled = false,
+  ...rest
 }) => {
   return (
     <Wrap
+      {...rest}
       styleWidth={width}
       styleHeight={height}
       disabledStyle={disabled}
