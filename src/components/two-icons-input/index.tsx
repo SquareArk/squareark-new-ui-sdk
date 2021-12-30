@@ -90,7 +90,7 @@ const ErrorText = styled.div`
   color: ${CommonTheme.colorPalette.secondary.red};
 `;
 
-interface ITwoIconsInput {
+interface ITwoIconsInput extends React.InputHTMLAttributes<any> {
   leftIcon?: any;
   rightIcon?: any;
   value?: any;
@@ -110,6 +110,7 @@ export const TwoIconsInput: React.FC<ITwoIconsInput> = ({
   onChange,
   helperText,
   error,
+  ...rest
 }) => {
   const [internalValue, setInternalValue] = React.useState(value);
 
@@ -125,7 +126,7 @@ export const TwoIconsInput: React.FC<ITwoIconsInput> = ({
       <Container>
         {leftIcon && <LeftIconContainer>{leftIcon}</LeftIconContainer>}
         <InputX
-          type="text"
+          {...rest}
           value={internalValue || ''}
           onChange={onChangeInput}
           placeholder={placeholder}
