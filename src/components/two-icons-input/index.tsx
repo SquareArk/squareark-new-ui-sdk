@@ -33,7 +33,7 @@ const InputX = styled.input<InputXType>`
             border: ${utils.isMoible(1)} solid ${
         CommonTheme.colorPalette.neutral.grey200
       };
-            background: transparent;
+            background: #ffffff;
         `;
     } else {
       if (props.isErrorStyle) {
@@ -41,14 +41,14 @@ const InputX = styled.input<InputXType>`
             border: ${utils.isMoible(1)} solid ${
           CommonTheme.colorPalette.secondary.red
         };
-            background: transparent;
+            background: #ffffff;
         `;
       } else {
         return `
             border: ${utils.isMoible(1)} solid ${
           CommonTheme.colorPalette.secondary.purpleLight
         };
-            background: transparent;
+            background: #ffffff;
         `;
       }
     }
