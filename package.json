@@ -1,7 +1,7 @@
 {
-  "name": "@super0605/squareark-ui-sdk",
-  "author": "super0605",
-  "version": "1.0.18",
+  "name": "@squareark/squareark-ui-sdk",
+  "author": "squareark",
+  "version": "1.0.19",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/super0605/squareark-new-ui-sdk.git"
+    "url": "git://github.com/SquareArk/squareark-new-ui-sdk.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
